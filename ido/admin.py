@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Survey
 
 class customAdmin(admin.ModelAdmin):
-    list_display = ['name', 'major', 'update_time']
+    list_display = ['id','name', 'major', 'enter_time']
 
 
 admin.site.register(Survey, customAdmin)

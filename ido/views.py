@@ -3,6 +3,8 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.urls import reverse
 from .models import Survey
 from django.utils import timezone
+from rest_framework import viewsets
+from .serializers import SurveySerializer
 
 # Create your views here.
 
@@ -20,7 +22,12 @@ def create(request):
     survey.phone_num = request.GET['phone_num']
     survey.body_temp = request.GET['body_temp']
     survey.agree_check = request.GET['chk_info']
-    survey.update_time = timezone.datetime.now()
+    survey.enter_time = timezone.datetime.now()
+    survey.exit_time = None
 
     survey.save()
     return HttpResponseRedirect(reverse('new'))
+
+class SurveyViewset(viewsets.ModelViewSet):
+    queryset = Survey.objects.all()
+    serializer_class = SurveySerializer
