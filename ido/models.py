@@ -11,6 +11,17 @@ class Survey(models.Model):
     agree_check = models.BooleanField()                     #동의여부
     exit_time = models.DateTimeField(blank=True, null=True) #퇴장시간날짜
 
+    #count = objects.count()
+    objects = models.Manager() # ~has no member vscode 에러 해결코드
+
+    def __str__(self):
+        return self.name
+
+class graph_Survey(models.Model):
+    name = models.CharField(max_length=20)               # 이름
+    exit_time = models.DateTimeField(blank=True, null=True) #퇴장시간날짜
+
+    #count = objects.count()
     objects = models.Manager() # ~has no member vscode 에러 해결코드
 
     def __str__(self):

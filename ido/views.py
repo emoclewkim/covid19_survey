@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from django.urls import reverse
-from .models import Survey
+from .models import Survey, graph_Survey
 from django.utils import timezone
 from rest_framework import viewsets
-from .serializers import SurveySerializer
+from .serializers import SurveySerializer, graph_SurveySerializer
 
 # Create your views here.
 
@@ -31,3 +31,7 @@ def create(request):
 class SurveyViewset(viewsets.ModelViewSet):
     queryset = Survey.objects.all()
     serializer_class = SurveySerializer
+
+class graph_SurveyViewset(viewsets.ModelViewSet):
+    queryset = graph_Survey.objects.all()
+    serializer_class = graph_SurveySerializer

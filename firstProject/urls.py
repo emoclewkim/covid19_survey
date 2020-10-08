@@ -19,9 +19,11 @@ import ido.views
 from ido import views
 from rest_framework import routers
 from django.conf.urls import url, include
+from ido.views import graph_SurveyViewset
 
 router = routers.DefaultRouter()
 router.register(r'surveys',views.SurveyViewset)
+router.register('graph_Surveys',graph_SurveyViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls,),
