@@ -35,3 +35,6 @@ class SurveyViewset(viewsets.ModelViewSet):
 class graph_SurveyViewset(viewsets.ModelViewSet):
     queryset = graph_Survey.objects.all()
     serializer_class = graph_SurveySerializer
+
+def exit(request):
+    return render(request, 'exit.html')
