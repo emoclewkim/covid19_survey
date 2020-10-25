@@ -44,7 +44,14 @@
             <div class="card-body">
               <h5 class="card-title">퇴장하시겠습니까?</h5>
               <p class="card-text">Would you like to exit?</p>
-              <a href="#" class="btn btn-primary">Yes</a>
+              <form action="{%url 'create2' %}">
+                <div class="form-group row">
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Yes</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
 

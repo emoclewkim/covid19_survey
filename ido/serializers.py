@@ -9,4 +9,4 @@ class SurveySerializer(serializers.ModelSerializer):
 class graph_SurveySerializer(serializers.ModelSerializer):
     class Meta:
         model = graph_Survey
-        fields = ('name', 'exit_time')
+        fields = ('id', 'exit_time')
