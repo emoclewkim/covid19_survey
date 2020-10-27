@@ -17,29 +17,31 @@
         <br><br>
         <!-- nav bar-->
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-            <h3 class="my-0 mr-md-auto font-weight-normal">고대세종 아이파크 휘트니스 센터 코로나19<br> HowMany</h3>
-            <nav class="my-2 my-md-0 mr-md-3">
-            </nav>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <h3 class="my-0 mr-md-auto font-weight-normal">고대세종 아이파크 휘트니스 센터 코로나19</h3>
+            <h5 class="my-0 mr-md-auto font-weight-normal">KOREA Univ.I Park fitness center Covid19</h5>
+            <p>&lt;HowMany&gt;</p>
+          </nav>
         </div>
 
         <form action="{%url 'create' %}" >
             <br>
                 <div class="form-group row">
-                  <label for="name" class="col-sm-2 col-form-label">이름</label>
+                  <label for="name" class="col-sm-2 col-form-label">이름(name)</label>
                   <div class="col-sm-10">
                     <input type="name" class="form-control" name="name" required>
                   </div>
                 </div>
 
                 <div class="form-group row">
-                  <label for="학과" class="col-sm-2 col-form-label">학과</label>
+                  <label for="학과" class="col-sm-2 col-form-label">학과(major)</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="major" required>
                   </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="연락처" class="col-sm-2 col-form-label">연락처</label>
+                    <label for="연락처" class="col-sm-2 col-form-label">연락처(phone)</label>
                     <div class="col-sm-10">
                       <input type="tel" class="form-control" name="phone_num" placeholder="01012345678" pattern="[0-9]{2,3}[0-9]{3,4}[0-9]{3,4}" required>
                     </div>
@@ -48,7 +50,7 @@
 
                 <fieldset class="form-group">
                   <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">체온</legend>
+                    <legend class="col-form-label col-sm-2 pt-0">체온(temp)</legend>
                     <div class="col-sm-10">
 
                     <select class="btn btn-secondary dropdown-toggle" name="body_temp" >
@@ -97,13 +99,22 @@
                     ※개인정보 수집,이용에 대한 동의를 거부할 권리가 있으나, 동의하지 않을 시 건물출입 불허 등 불이익이 있을 수 있습니다.
                 </p>
                 <br>
+                <p><strong>Do you agree to provide personal information for investigation?</strong></p>
+                <p>Consent to collection and use of personal information</p>
+                <p>
+                  -Item: name, position, contact information, student number, symptom <br>
+                  -Purpose of collection: Personal health survey related to corona 19 virus <br>
+                  -Retention period: Until the Korean government declares the end of the corona 19 virus situation <br><br>
+                  ※You have the right to refuse consent to the collection and use of personal information, but if you do not agree, there may be disadvantages such as denial of access to the building.
+                </p>
+                <br>
                 <div class="form-group row">
                   <div class="col-sm-2"></div>
                   <div class="col-sm-10">
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="chk_info" id="gridCheck1" value="True" required>
                       <label class="form-check-label" for="gridCheck1">
-                        동의합니다.
+                        동의합니다(agree)
                       </label>
                     </div>
                   </div>
@@ -111,7 +122,7 @@
                 <div class="form-group row">
                   <div class="col-sm-2"></div>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">제출하기</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
 
